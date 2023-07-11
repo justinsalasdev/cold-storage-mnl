@@ -15,9 +15,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en h-full">
       <body
-        className={inter.className + " bg-prim-950 h-full text-slate-50 p-6"}
+        className={
+          inter.className +
+          " bg-prim-950 min-h-screen text-slate-50 p-6 grid grid-rows-[auto_1fr]"
+        }
       >
-        <header>
+        <header className="">
           <Image
             src="/logo.png"
             alt="company logo"
