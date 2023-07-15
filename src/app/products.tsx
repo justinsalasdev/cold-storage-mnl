@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function Products() {
   return (
-    <div>
+    <div className="grid grid-cols-4 gap-4 mt-4">
       {products.map((p) => (
-        <div key={p.id}>
-          <p className="font-semibold text-lg">{p.name}</p>
+        <div key={p.id} className="rounded border border-slate-600">
           <Image
             src={p.image}
             alt={p.name}
             width={300}
             height={200}
-            className="object-contain"
+            className="object-cover w-full h-52"
           />
+          <p className="font-light p-2 uppercase">{p.name}</p>
         </div>
       ))}
     </div>
